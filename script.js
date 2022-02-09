@@ -1,10 +1,3 @@
-//Saludar Cliente
-//Clases-Cursos Disponibles
-//En Base al Curso seleccionado - Calculo de Precio
-//Informar Cliente sobre curso que esta eligiendo y el monto a pagar.
-//Cobrar
-
-
 const saludo = () => {
     alert("Bienvenido a la Academia de Arqueria - CBA")
 }
@@ -53,13 +46,27 @@ const informarCurso = (CursoName,precioCurso) => {
     alert(texto)
 }
 
+const cobrarCurso = () => {
+    let monto = parseInt(prompt("Con cuanto abona"))
+    while(isNaN(monto)){
+        monto = parseInt(prompt("Con cuanto abona"))
+    }
+    if(monto > precioCurso){
+        alert("Su vuelto es "+(monto-precioCurso))
+    }else if(monto === precioCurso){
+        alert("Gracias !")
+    }else{
+        alert("No le alcanza !")
+    }
+}
 
 saludo()
 let CursoName = cursosDisponibles()
 let precioCurso = calcularPrecio(CursoName)
 informarCurso(CursoName,precioCurso)
+cobrarCurso()
 
-//
+
 
 
 
