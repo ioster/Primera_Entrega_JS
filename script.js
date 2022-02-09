@@ -59,5 +59,7 @@ let CursoName = cursosDisponibles()
 let precioCurso = calcularPrecio(CursoName)
 informarCurso(CursoName,precioCurso)
 
+//
+
 
 
